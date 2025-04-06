@@ -41,8 +41,8 @@ export async function queryAI(prompt: string): Promise<any> {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${API_KEY}`,
-          'HTTP-Referer': 'http://localhost:3000', // Replace with your actual domain in production
-          'X-Title': 'Precision Baking', // Optional application name
+          'HTTP-Referer': process.env.VERCEL_URL || 'https://precision-baking.vercel.app', // Use Vercel URL in production
+          'X-Title': 'Precision Baking',
         },
       }
     );
