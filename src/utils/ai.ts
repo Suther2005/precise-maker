@@ -188,7 +188,7 @@ function createFallbackResponse(originalInput: string): any {
   let ingredient: string = originalInput;
   
   // Simple regex to extract common measurement patterns
-  const measurementRegex = /^([\d\/\.\s]+)\s*([a-zA-Z]+)\s+(?:of\s+)?(.+)$/i;
+  const measurementRegex = /^([\d/.\s]+)\s*([a-zA-Z]+)\s+(?:of\s+)?(.+)$/i;
   const match = originalInput.match(measurementRegex);
   
   if (match) {
